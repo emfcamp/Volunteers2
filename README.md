@@ -4,6 +4,13 @@ The [Electromagnetic Field](https://www.emfcamp.org/admin/users) volunteer syste
 
 Why Volunteers 2? Because we already have a [volunteers](https://github.com/emfcamp/Volunteers2) repo.
 
-## Intro ##
+## Installation ##
 
-The volunteer system is built using [Django](https://www.djangoproject.com/).
+Everything runs inside a vagrant box so make sure you have that [installed](https://www.vagrantup.com/docs/installation/). Once vagrant's installed, run:
+
+```bash
+> vagrant up --provider virtualbox
+> vagrant ssh
+(vagrant)> make update
+(vagrant)> make
+```
