@@ -12,6 +12,7 @@ Everything runs inside a vagrant box so make sure you have that [installed](http
 > vagrant up --provider virtualbox
 > vagrant ssh
 (vagrant)> make update
+(vagrant)> make db
 (vagrant)> make
 ```
 

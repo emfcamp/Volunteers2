@@ -21,10 +21,19 @@ deploy:
 lock:
 	pipenv lock
 
+db: migrate addadmin loaddata
+
+addadmin:
+	DJANGO_SETTINGS_MODULE=$(SETTINGS) pipenv run python manage.py createsuperuser
+
 migrate:
 	DJANGO_SETTINGS_MODULE=$(SETTINGS) pipenv run python manage.py migrate
 
-CMD?=--help
+loaddata:
+	DJANGO_SETTINGS_MODULE=$(SETTINGS) pipenv run python manage.py loaddata roles
+	DJANGO_SETTINGS_MODULE=$(SETTINGS) pipenv run python manage.py loaddata venues
+
+cmd?=--help
 manage:
-	DJANGO_SETTINGS_MODULE=$(SETTINGS) pipenv run python manage.py $(CMD)
+	DJANGO_SETTINGS_MODULE=$(SETTINGS) pipenv run python manage.py $(cmd)
 

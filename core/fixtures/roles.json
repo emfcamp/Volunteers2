@@ -1,0 +1,29 @@
+[
+{
+  "model": "core.role",
+  "pk": 1,
+  "fields": {
+    "name": "A/V",
+    "description": "Make sure that speakers are correctly mic'd; that any presentation is visible on screen and that things look good",
+    "training_notes": "Don't burn down the tent"
+  }
+},
+{
+  "model": "core.role",
+  "pk": 2,
+  "fields": {
+    "name": "Herald",
+    "description": "Introduce the speaker (check their preferred title/pronouns). Keep them to time. Get the next speaker ready",
+    "training_notes": "We're serious about title & pronouns"
+  }
+},
+{
+  "model": "core.role",
+  "pk": 3,
+  "fields": {
+    "name": "Entrance Steward",
+    "description": "Greet people as they enter. Check their tickets. Issue wristbands",
+    "training_notes": "Be nice"
+  }
+}
+]
