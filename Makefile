@@ -7,7 +7,7 @@ ifeq ("$(SETTINGS)", "")
 	endif
 endif
 
-.PHONY: run update
+.PHONY: run update deploy lock manage migrate start
 
 run:
 	DJANGO_SETTINGS_MODULE=$(SETTINGS) pipenv run python manage.py runserver 0:5050
@@ -21,5 +21,10 @@ deploy:
 lock:
 	pipenv lock
 
+migrate:
+	DJANGO_SETTINGS_MODULE=$(SETTINGS) pipenv run python manage.py migrate
+
+CMD?=--help
 manage:
-	DJANGO_SETTINGS_MODULE=$(SETTINGS) pipenv run python manage.py
+	DJANGO_SETTINGS_MODULE=$(SETTINGS) pipenv run python manage.py $(CMD)
+
