@@ -14,3 +14,9 @@ Everything runs inside a vagrant box so make sure you have that [installed](http
 (vagrant)> make update
 (vagrant)> make
 ```
+
+If you're on a Mac or Windows you can use [Vagrant's SMB sharing](https://www.vagrantup.com/docs/synced-folders/smb.html). To do this, instead of the first line above run:
+
+```bash
+> VAGRANT_SMB=true vagrant up --provider virtualbox
+```
